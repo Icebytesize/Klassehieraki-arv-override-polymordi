@@ -12,3 +12,20 @@ List<SalariedEmployee> salariedEmployees = new List<SalariedEmployee>
     new SalariedEmployee("Eva", 202, new DateTime(2017, 5, 15), 6000m, 600m),
     new SalariedEmployee("Frank", 203, new DateTime(2019, 8, 10), 5500m, 550m)
 };
+
+decimal totalSalaryExpenses = 0;
+
+foreach (var employee in hourlyEmployees)
+{
+    Console.WriteLine(employee.Description());
+    Console.WriteLine();
+    totalSalaryExpenses += employee.CalculateSalary();
+}
+
+foreach (var employee in salariedEmployees)
+{
+    Console.WriteLine(employee.Description());
+    totalSalaryExpenses += employee.CalculateSalary();
+}   
+
+Console.WriteLine($"\nTotal Salary Expenses: {totalSalaryExpenses:C}");
