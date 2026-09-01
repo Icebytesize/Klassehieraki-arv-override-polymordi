@@ -20,7 +20,7 @@ namespace Klassehieraki_arv_override_polymordi.Classes
         public virtual decimal CalculateSalary()
         {
             // Base salary calculation logic for a generic employee
-            return 30000.00m; // Example base salary
+            return 0.00m; // Example base salary
         }
 
         public virtual string Description()
